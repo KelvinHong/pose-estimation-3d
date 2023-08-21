@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <!-- <meta http-equiv = "x-ua-compatible" content = "IE=edge"> -->
+        <meta name = "viewport" content= "initial-scale=1.0">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        
+        <title>3D Pose Visualizer -- Result</title>
+        <style>
+            model-viewer, img {
+              width: 600px;
+              height: 600px;
+            }
+            #display_object, #display_image {
+                float: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = "box">
+            <div>Result</div>
+            <div id="display_image">
+                <h4>Original Image</h4>
+                <img src="{{ path_to_img }}" alt="Original user image">
+            </div>
+            
+            <div id="display_object">
+                <h4>3D Pose</h4>
+                <model-viewer camera-controls alt="Model" src="{{ path_to_glb }}">
+                </model-viewer>
+            </div>
+            <form method="GET" action="/">
+                <input type="submit" value="Try Another">
+            </form>
+        </div>
+    </body> 
+
+</html>

@@ -1,0 +1,16 @@
+To add new models, 
+start with a 3D model with a T shape or A shape body.
+Then, in Blender, import the model and let it facing the X axis direction.
+Fit an armature to the body. (There is a Blender plugin for human armature.)
+Note that arms should not be bent, means the angle of elbow bent
+should be nearly 180 degree. 
+A strict T shape or A shape only.
+Parent the armature to the body with automatic weights.
+Make sure the armature works on the body by swinging the bones. 
+
+Select body and armature, export to model.fbx with options:
+- Path Mode: Copy, Embed Textures
+- Limit to selected objects
+- Armature: Deselect "Add Leaf Bones"
+
+Store in a folder in "blender_files/" like any other folders.

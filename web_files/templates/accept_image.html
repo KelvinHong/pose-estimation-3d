@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>3D Pose Visualizer -- Input</title>
+	</head>
+	<body>
+    	<h1>Upload image of your pose and we will turn it into a 3D model</h1>
+
+		<form method="POST" enctype="multipart/form-data" action="/upload">
+			<input type="file" id="pose-image" name="pose-file" accept="image/*">
+			<!-- Choose model -->
+			<p>Choose body model</p>
+			{% for model in models %}
+			<input type="radio" id="{{ model.code }}" name="bodymodel" value="{{ model.code }}">
+			<label for="male">{{ model.desc }}</label><br>
+			{% endfor %}
+			<input type="submit" value="Submit">
+		</form>
+		<div id="estimate">
+			Estimated running time is: [{{ avg_time }}]. 
+		</div>
+	</body>
+</html>

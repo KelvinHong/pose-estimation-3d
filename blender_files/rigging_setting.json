@@ -1,0 +1,18 @@
+{
+    "_comment": "Contain setting for number of rigging frames and decimate ratios",
+    "verbal": true,
+    "pose_frame": 5,
+    "rigging_frame": 8,
+    "decimate_ratio": 0.7,
+    "subd_level": 1,
+    "body_subd_level": 1,
+    "default_quality_step": 9,
+    "default_collision_quality": 2,
+    "hand_ratios": [
+        {"value": 1.5, "key": ["male", "skinny"]},
+        {"value": 1.1, "key": ["male", "normal"]},
+        {"value": 1, "key": ["male", "fat"]},
+        {"value": 1, "key": ["female", "normal"]},
+        {"value": 1, "key": ["female", "fat"]}
+    ]
+}

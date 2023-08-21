@@ -1,0 +1,25 @@
+terminaltables
+scipy
+opencv-python
+matplotlib
+visdom
+tqdm
+tensorboardx
+easydict
+pyyaml
+halpecocotools
+munkres
+timm==0.1.20
+natsort
+prettytable
+chumpy
+imageio
+imageio-ffmpeg
+roma
+ipdb
+pytorch-metric-learning                         # For one-shot action recognition
+smplx[all]                                      # For mesh recovery
+pyqt5 # To show 3d matplotlib graph
+auto-py-to-exe
+flask
+PySimpleGUI # for ui.py

@@ -1,0 +1,25 @@
+After open the server with ./start_web.bat , 
+the server can be access with http://127.0.0.1:5000/
+
+To use the API of 3D pose, POST below data to http://127.0.0.1:5000/upload
+
+files: "pose-file" an image of user with pose
+
+form-data: "bodymodel" Choose from "male" and "hero1".
+           "headless" use a boolean `true`.
+
+Return {
+    "path_to_img": f"/images/example.png", 
+    "path_to_glb": f"/models/example_pose.glb",
+}
+
+Then, access the files by two methods: 
+1) You can use API formal:
+Image: GET request to http://127.0.0.1:5000/images/example.png
+        Return byte form of image
+Model: GET request to http://127.0.0.1:5000/models/example_pose.glb
+        Return byte form of glb file.
+
+2) Directly from server: 
+Image: ./web_files/static/uploads/example.png
+Model: ./web_files/static/uploads/example_pose.glb
