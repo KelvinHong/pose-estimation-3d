@@ -3,11 +3,23 @@
 Adaption and Unification of AlphaPose and MotionBert. 
 
 # Installation guide
+Please uses Python 3.9 since only it is compatible with Blender version (see below).
+
 ```
+# 0.1 Create a virtual environment
+python -m pip install virtualenv
+python -m virtualenv venv
+
+# 0.2 Activate Virtual Environment (Windows 10)
+.\venv\Scripts\activate 
+## If you're not on Windows, there should be some tutorial 
+## helping you to activate venv on your machine. It
+## would be better to refer to them. 
+
 # 1. Install PyTorch
 pip install torch torchvision
 
-# 2. install
+# 2. Install other stuff
 pip install cython
 python setup.py build develop --user
 python -m pip install -r requirements.txt
@@ -19,6 +31,21 @@ pip install git+https://github.com/valentin-fngr/cython_bbox.git # to fix np.flo
 Install Blender 2.93, and add `blender` to environment path.
 For example, if your blender executable is under `C:/Users/ABC/Blender 2.93/path/to/blender.exe`,
 add `C:/Users/ABC/Blender 2.93/path/to/` to your environment path. 
+
+Please verify your Blender installation by running the following 
+in your command line interface:
+```
+# Bring up Blender Interface
+blender 
+
+# Gives you Python Interactive Console with Headless Blender.
+blender -b --python-console
+# You should see something like
+# Python 3.9.X (default, Mar  1 2021, 08:18:55) [XYZ] on ABCOS
+# then press Ctrl+Z, followed by Enter key to exit the interactive console.
+```
+
+If all are well, you can proceed to downloading models:
 
 Download Yolo detection model from google drive
 https://drive.google.com/open?id=1D47msNOOiJKvPOXlnpyzdKA3k6E97NTC
